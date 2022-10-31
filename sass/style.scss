@@ -1,0 +1,236 @@
+:root {
+  --general-padding: 25px;
+}
+html * {
+  font-family: "Roboto";
+}
+body {
+  margin: 0;
+}
+// ICONS
+.icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.location-pin::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  position: absolute;
+  left: -30px;
+  top: 0;
+  content: "\f3c5";
+}
+// END ICONS
+
+#header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .main-title {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    font-family: "Shrikhand";
+    font-weight: 500;
+    margin: 0;
+    padding: 15px 0 9px;
+    box-shadow: 0 3px 7px #b6b6b6;
+  }
+  .location-container {
+    width: 100%;
+    height: 60px;
+    background-color: #ededed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .location {
+      font-size: 18px;
+      font-family: "Roboto";
+
+      position: relative;
+    }
+  }
+}
+
+#explore {
+  width: 100%;
+  background-color: #f8f8f8;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 50px;
+  .explore-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 26px;
+    padding: 40px 50px 0;
+    text-align: center;
+  }
+  .explore-text {
+    margin-top: 0;
+    padding: 0 30px;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+  }
+  .explore-button {
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+    background: linear-gradient(#ee71ff, #a55fff);
+    padding: 17px 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 30px;
+  }
+}
+
+#working {
+  margin-top: 20px;
+  padding: var(--general-padding);
+  .working-title {
+    margin: 0;
+  }
+  .step-list {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin-top: 0;
+    .step {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      background-color: #f8f8f8;
+      margin-top: 25px;
+      border-radius: 20px;
+      position: relative;
+      box-shadow: 0 3px 10px #b6b6b6;
+      .step-number {
+        position: absolute;
+        left: -13px;
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #a55fff;
+        color: white;
+      }
+      .step-text {
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        i {
+          position: absolute;
+          left: 35px;
+          color: rgb(102, 102, 102);
+        }
+      }
+    }
+  }
+}
+
+#restaurants {
+  background-color: #f8f8f8;
+  padding: var(--general-padding);
+  .restaurant-list {
+    display: flex;
+    flex-direction: column;
+  }
+  // CARDS
+  .card-link {
+    width: 100%;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px #b6b6b6;
+    position: relative;
+    .card-label {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #98fddf;
+      color: #39695a;
+      padding: 6px 10px;
+      border-radius: 2px;
+    }
+    &:not(:first-child) {
+      margin-top: 22px;
+    }
+    &:visited {
+      color: black;
+    }
+    .card {
+      .card-image {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+      }
+      .card-body {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        .card-text {
+          .card-title {
+            margin: 0;
+          }
+          .card-city {
+            margin: 6px 0 0 0;
+            font-weight: 300;
+          }
+        }
+        i {
+          margin-right: 15px;
+          font-size: 25px;
+          color: grey;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background-color: #6a6a6a;
+  padding: var(--general-padding);
+  color: white;
+  margin-top: 30px;
+  .footer-title {
+    margin-top: 0;
+    font-family: "Shrikhand";
+    font-weight: 500;
+  }
+  .footer-link-list {
+    list-style: none;
+    padding-left: 0;
+    li:not(:first-child) {
+      margin-top: 5px;
+    }
+    .footer-link {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      i {
+        margin-right: 5px;
+        min-width: 20px;
+      }
+      .footer-link-text {
+        margin: 0;
+      }
+    }
+  }
+}
