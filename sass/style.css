@@ -1,6 +1,6 @@
 :root {
   --general-padding: 25px;
-  --loading-duration: 2s;
+  --loading-duration: 1.5s;
 }
 
 html * {
@@ -33,7 +33,7 @@ body {
 }
 
 #loading {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -232,7 +232,8 @@ body {
   font-weight: 100;
   text-align: center;
 }
-#explore .explore-button {
+
+.colored-button {
   font-size: 16px;
   color: white;
   font-weight: 600;
@@ -245,7 +246,7 @@ body {
   transition: 0.4s;
   box-shadow: 0 3px 10px #b6b6b6;
 }
-#explore .explore-button:hover {
+.colored-button:hover {
   box-shadow: 0 3px 12px #8d8d8d;
 }
 
@@ -328,8 +329,12 @@ body {
   text-decoration: none;
   border-radius: 15px;
   overflow: hidden;
+  transition: 0.3s;
   box-shadow: 0 3px 10px #b6b6b6;
   position: relative;
+}
+#restaurants .restaurant-list .card-link:hover {
+  box-shadow: 0 3px 10px #8d8d8d;
 }
 #restaurants .restaurant-list .card-link .card-label {
   position: absolute;
@@ -583,6 +588,12 @@ body {
 #menu .menu-container .menu-step .dishes-list .dish-container .dish-select .dish-icon-container i {
   color: white;
   font-size: 25px;
+}
+
+.order-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 
 @-webkit-keyframes rotate-select {

@@ -1,6 +1,6 @@
 :root {
   --general-padding: 25px;
-  --loading-duration: 2s; //2.45
+  --loading-duration: 1.5s;
 }
 html * {
   font-family: "Roboto";
@@ -32,7 +32,7 @@ body {
 // END ICONS
 
 #loading {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -196,24 +196,23 @@ body {
     font-weight: 100;
     text-align: center;
   }
-  .explore-button {
-    font-size: 16px;
-    color: white;
-    font-weight: 600;
-    background: linear-gradient(#ee71ff, #a55fff);
-    padding: 17px 30px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.4s;
-    box-shadow: 0 3px 10px #b6b6b6;
-    &:hover {
-      box-shadow: 0 3px 12px #8d8d8d;
-    }
+}
+.colored-button {
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  background: linear-gradient(#ee71ff, #a55fff);
+  padding: 17px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 3px 10px #b6b6b6;
+  &:hover {
+    box-shadow: 0 3px 12px #8d8d8d;
   }
 }
-
 #working {
   margin-top: 20px;
   padding: var(--general-padding);
@@ -292,8 +291,12 @@ body {
       text-decoration: none;
       border-radius: 15px;
       overflow: hidden;
+      transition: 0.3s;
       box-shadow: 0 3px 10px #b6b6b6;
       position: relative;
+      &:hover {
+        box-shadow: 0 3px 10px #8d8d8d;
+      }
       .card-label {
         position: absolute;
         top: 15px;
@@ -555,6 +558,11 @@ body {
       }
     }
   }
+}
+.order-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
 }
 @keyframes rotate-select {
   from {
