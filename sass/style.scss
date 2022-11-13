@@ -3,7 +3,7 @@
   --loading-duration: 1.5s;
 }
 html * {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 body {
   margin: 0;
@@ -197,6 +197,7 @@ body {
     text-align: center;
   }
 }
+
 .colored-button {
   font-size: 16px;
   color: white;
@@ -427,6 +428,7 @@ body {
         font-weight: 500;
         font-size: 35px;
         margin-top: 10px;
+        max-width: 80%;
       }
 
       .menu-fav-icons {
@@ -564,6 +566,7 @@ body {
   width: 100%;
   justify-content: center;
 }
+
 @keyframes rotate-select {
   from {
     transform: rotate(0deg);

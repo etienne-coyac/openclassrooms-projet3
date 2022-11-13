@@ -4,7 +4,7 @@
 }
 
 html * {
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -460,6 +460,7 @@ body {
   font-weight: 500;
   font-size: 35px;
   margin-top: 10px;
+  max-width: 80%;
 }
 #menu .menu-container .menu-title-container .menu-fav-icons {
   height: 50px;
