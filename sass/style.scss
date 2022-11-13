@@ -458,14 +458,13 @@ body {
           color: grey;
         }
         .fa-solid.fa-heart.filler {
-          opacity: 0;
-          transition: 0.4s;
-          background: linear-gradient(45deg, #ee71ff, #a55fff);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color: transparent;
+          -webkit-text-stroke-width: 2px;
+          -webkit-text-stroke-color: grey;
+
           &:hover {
-            opacity: 1;
+            -webkit-text-stroke-width: 0px;
+            animation: like-heart 0.25s linear forwards;
           }
         }
       }
