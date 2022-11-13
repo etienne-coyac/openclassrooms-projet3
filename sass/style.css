@@ -501,12 +501,6 @@ body {
 #menu .menu-container .menu-title-container .menu-fav-icons {
   height: 50px;
 }
-#menu .menu-container .menu-title-container .menu-fav-icons .fa-heart {
-  position: absolute;
-  right: 40px;
-  font-size: 30px;
-  color: grey;
-}
 #menu .menu-container .menu-title-container .menu-fav-icons .fa-solid.fa-heart.filler {
   color: transparent;
   -webkit-text-stroke-width: 2px;
