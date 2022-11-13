@@ -1,6 +1,6 @@
 :root {
   --general-padding: 25px;
-  --loading-duration: 1.5s;
+  --loading-duration: 0s;
 }
 html * {
   font-family: "Roboto", sans-serif;
@@ -60,7 +60,7 @@ body {
         animation: 1s loading-animation infinite;
         &:nth-child(1) {
           background-color: #9356dc;
-          animation-delay: 0;
+          animation-delay: unset;
         }
         &:nth-child(2) {
           background-color: #ff79da;
@@ -340,14 +340,13 @@ body {
             color: grey;
           }
           .fa-solid.fa-heart.filler {
-            opacity: 0;
-            transition: 0.4s;
-            background: linear-gradient(45deg, #ee71ff, #a55fff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: transparent;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: grey;
+
             &:hover {
-              opacity: 1;
+              -webkit-text-stroke-width: 0px;
+              animation: like-heart 0.25s linear forwards;
             }
           }
         }
@@ -368,8 +367,27 @@ body {
   }
 }
 
+@keyframes like-heart {
+  from {
+    background: linear-gradient(45deg, #ee71ff, #a55fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: 25px;
+  }
+
+  to {
+    background: linear-gradient(45deg, #ee71ff, #a55fff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+  }
+}
 #footer {
-  background-color: #6a6a6a;
+  background-color: #353535;
   padding: var(--general-padding);
   color: white;
   margin-top: 30px;
